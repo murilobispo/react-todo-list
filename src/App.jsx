@@ -1,7 +1,9 @@
 import styled from "styled-components"
+import { TodoTitle } from "./components/TodoTitle"
+import TodoForm from "./components/TodoForm"
 
 const TodoWrapper = styled.body`
-  background-color: #171723;
+  background-color:var(--primary-color);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -9,18 +11,22 @@ const TodoWrapper = styled.body`
   align-items: center;
 `
 const TodoMain = styled.main`
-  background-color: #292C44;
-  width: 40%;
+  background-color: var(--secondary-color);
+  width: 750px;
   height: 70%;
 `
-function App() {
+const Todo = styled.div`
+`
+
+export default function App() {
   return (
       <TodoWrapper>
         <TodoMain>
-
+          <TodoTitle>To-Do List</TodoTitle>
+          <TodoForm/>
+          <Todo>
+          </Todo>
         </TodoMain>
       </TodoWrapper>
   )
 }
-
-export default App
