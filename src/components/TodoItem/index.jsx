@@ -26,6 +26,7 @@ const TodoItemText = styled.p`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.5;
 
     ${CheckBox}:checked + & {
         text-decoration: line-through;
@@ -33,9 +34,6 @@ const TodoItemText = styled.p`
         color: #D8AD94;
     }
 `
-
-
-
 
 const IconsContainer = styled.div`
     display: flex;
@@ -61,12 +59,11 @@ const createStyledIcon = (icon, iconColor) => {
 const EditIcon = createStyledIcon(FaRegEdit, "#00FFD1;")
 const DeleteIcon = createStyledIcon(FaRegTrashCan, "#FF0000")
 
-
-export default function TodoItem(){
+export default function TodoItem({ children }){
     return(
         <TodoItemContainer>
             <CheckBox type="checkbox"></CheckBox>
-            <TodoItemText>Item</TodoItemText>
+            <TodoItemText>{ children }</TodoItemText>
             <IconsContainer>
                 <EditIcon/>
                 <DeleteIcon/>

@@ -10,7 +10,7 @@ export const TodoInput = styled.input`
   background-color:var(--primary-color);
   color: #fff;
   padding: 5px 100px;
-  transition: 1s ease;
+  transition: 0.5s ease;
 
   &::placeholder {
     color: #ffffff73 
