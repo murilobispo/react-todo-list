@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { TodoInput } from "../TodoInput"
-import { SubmitPlus } from "../SubmitPlus"
+import  SubmitButton  from "../SubmitButton"
 
 const TodoFormContainer = styled.form`
   width: 100%;
@@ -14,8 +14,8 @@ const TodoFormContainer = styled.form`
 export default function TodoForm() {
     return(
         <TodoFormContainer>
-            <TodoInput type="text" placeholder="- Add a task -"></TodoInput>
-            <SubmitPlus/>
+            <TodoInput type="text" placeholder="Add a task"></TodoInput>
+            <SubmitButton type="submit"/>
         </TodoFormContainer>
     )
 }
