@@ -11,6 +11,19 @@ const GlobalStyle = createGlobalStyle`
   --secondary-color:#292C44;
   }
 
+  ::-webkit-scrollbar{
+    width: 10px;
+
+  }
+  ::-webkit-scrollbar-track{
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 20px;
+  }
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
