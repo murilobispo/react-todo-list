@@ -59,14 +59,14 @@ const createStyledIcon = (icon, iconColor) => {
 const EditIcon = createStyledIcon(FaRegEdit, "#00FFD1;")
 const DeleteIcon = createStyledIcon(FaRegTrashCan, "#FF0000")
 
-export default function TodoItem({ children }){
+export default function TodoItem({ children, onClick }){
     return(
         <TodoItemContainer>
             <CheckBox type="checkbox"></CheckBox>
             <TodoItemText>{ children }</TodoItemText>
             <IconsContainer>
                 <EditIcon/>
-                <DeleteIcon/>
+                <DeleteIcon onClick={onClick}/>
             </IconsContainer>
         </TodoItemContainer>
     )

@@ -50,6 +50,10 @@ export default function App() {
       }
   }
 
+  const deleteTask = (i) => {
+    setTodoTextList(todoTextList.filter((_, index) => index !== i));
+  }
+  
   return (
     <TodoWrapper>
       <TodoMain>
@@ -68,7 +72,7 @@ export default function App() {
           <EmptyTodo/> 
           :(
           todoTextList.map((text, index) =>(
-                <TodoItem>{text}</TodoItem>
+            <TodoItem onClick={() => deleteTask(index)}>{text}</TodoItem>
             ))
           )
         }
