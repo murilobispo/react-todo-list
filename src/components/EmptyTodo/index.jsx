@@ -7,6 +7,7 @@ const EmptyTodoContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin: auto 0;
 `
 const LogoImage = styled.img`
     width: 170px;

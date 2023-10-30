@@ -31,6 +31,9 @@ const TodoFormContainer = styled.form`
   margin: 30px 0;
   overflow: hidden;
   position: relative;
+  @media (orientation: landscape) {
+    margin: 20px 0;
+  }
 `
 
 const TodoListContainer = styled.ul`
@@ -51,6 +54,10 @@ const TodoListContainer = styled.ul`
   }
   @media (max-height: 590px) {
     height: 300px;
+  }
+  @media (orientation: landscape) and (max-height: 500px) {
+    height:200px;
+    padding: 0 0 10px 0;
   }
 `
 

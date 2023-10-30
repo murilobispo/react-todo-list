@@ -7,4 +7,7 @@ export const TodoTitle = styled.h1`
   color:#fff;
   text-align: center;
   margin: 30px 0;
+  @media (orientation: landscape) {
+    margin: 20px 0;
+  }
 `
