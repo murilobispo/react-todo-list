@@ -28,11 +28,11 @@ const TodoItemText = styled.p`
     text-overflow: ellipsis;
     line-height: 1.5;
 
-    ${CheckBox}:checked + & {
+    ${props => props.isCrossed && `
         text-decoration: line-through;
         text-decoration-thickness: 2px;
         color: #D8AD94;
-    }
+    `}
 `
 
 const IconsContainer = styled.div`
@@ -56,17 +56,16 @@ const createStyledIcon = (icon, iconColor) => {
         }
     `
 }
-const EditIcon = createStyledIcon(FaRegEdit, "#00FFD1;")
+
 const DeleteIcon = createStyledIcon(FaRegTrashCan, "#FF0000")
 
-export default function TodoItem({ children, onClick }){
+export default function TodoItem({ children, completed, deleteOnClick, checkboxOnChange, checked }){
     return(
         <TodoItemContainer>
-            <CheckBox type="checkbox"></CheckBox>
-            <TodoItemText>{ children }</TodoItemText>
+            <CheckBox type="checkbox" onChange={checkboxOnChange} checked={checked}></CheckBox>
+            <TodoItemText isCrossed={completed}>{ children }</TodoItemText>
             <IconsContainer>
-                <EditIcon/>
-                <DeleteIcon onClick={onClick}/>
+                <DeleteIcon onClick={deleteOnClick}/>
             </IconsContainer>
         </TodoItemContainer>
     )
