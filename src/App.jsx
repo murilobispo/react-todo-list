@@ -41,7 +41,7 @@ const TodoListContainer = styled.ul`
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  min-height: 200px;
+  min-height: 150px;
   max-height: 490px;
   overflow: auto;
   padding: 0 0 40px 0;
@@ -56,7 +56,7 @@ const TodoListContainer = styled.ul`
     height: 300px;
   }
   @media (orientation: landscape) and (max-height: 500px) {
-    height:200px;
+    height: 170px;
     padding: 0 0 10px 0;
   }
 `
