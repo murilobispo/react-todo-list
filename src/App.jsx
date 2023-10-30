@@ -18,6 +18,10 @@ const TodoWrapper = styled.body`
 const TodoMain = styled.main`
   background-color: var(--secondary-color);
   width: 750px;
+  margin: auto 20px;
+  @media (max-width: 419px) {
+    width: 93%;
+  }
 `
 
 const TodoFormContainer = styled.form`
@@ -38,6 +42,16 @@ const TodoListContainer = styled.ul`
   max-height: 490px;
   overflow: auto;
   padding: 0 0 40px 0;
+  
+  @media (max-height: 740px) {
+    height: 400px;
+  }
+  @media (max-height: 640px) {
+    height: 350px;
+  }
+  @media (max-height: 590px) {
+    height: 300px;
+  }
 `
 
 export default function App() {

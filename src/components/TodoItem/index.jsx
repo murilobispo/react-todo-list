@@ -12,7 +12,7 @@ const TodoItemContainer = styled.li`
     padding: 0 15px;
     box-sizing: border-box;
     display: flex;
-    gap:18px;
+    gap:15px;
     align-items: center;
     border-radius: 11px;
     flex-shrink: 0;
