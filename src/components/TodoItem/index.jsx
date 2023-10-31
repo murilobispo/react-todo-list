@@ -1,10 +1,29 @@
 import styled from "styled-components"
 import {FaRegEdit} from "react-icons/fa"
 import {FaRegTrashCan} from "react-icons/fa6"
+import {IoMdCheckboxOutline, IoMdSquareOutline} from "react-icons/io"
+import { BsCheck } from "react-icons/bs";
 
+
+const CustomCheckbox = styled.label`
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+`;
 const CheckBox = styled.input`
-    
+    display: none;
 `
+
+const createStyledCheckbox = (checked) => {
+    return styled(checked ? IoMdCheckboxOutline : IoMdSquareOutline)`
+        font-size: 22px;
+        color: white;
+        &:hover{
+            color: #FF7A00;
+        }
+    `
+}
+
 const TodoItemContainer = styled.li`
     background-color: var(--primary-color);
     width: 90%;
@@ -60,9 +79,14 @@ const createStyledIcon = (icon, iconColor) => {
 const DeleteIcon = createStyledIcon(FaRegTrashCan, "#FF0000")
 
 export default function TodoItem({ children, completed, deleteOnClick, checkboxOnChange, checked }){
+    const CheckboxIcon = createStyledCheckbox(checked);
+
     return(
         <TodoItemContainer>
-            <CheckBox type="checkbox" onChange={checkboxOnChange} checked={checked}></CheckBox>
+            <CustomCheckbox>
+                <CheckBox type="checkbox" onChange={checkboxOnChange} checked={checked}></CheckBox>
+                <CheckboxIcon checked={checked} />
+            </CustomCheckbox>
             <TodoItemText isCrossed={completed}>{ children }</TodoItemText>
             <IconsContainer>
                 <DeleteIcon onClick={deleteOnClick}/>
