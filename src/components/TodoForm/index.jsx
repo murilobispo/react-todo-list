@@ -22,6 +22,7 @@ export default function TodoForm({onSubmit, value, onChange}){
                 placeholder="Add a task"
                 value={value}
                 onChange={onChange}
+                spellcheck="false"
             />
             <SubmitButton />
         </TodoFormContainer>
