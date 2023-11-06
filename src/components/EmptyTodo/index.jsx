@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import Logo from "../../assets/app-logo.png"
 
-
 const EmptyTodoContainer = styled.div`
     display: flex;
     flex-direction: column;

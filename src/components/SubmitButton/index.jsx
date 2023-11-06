@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { TodoInput } from "../TodoInput"
 import {PiPlusBold} from 'react-icons/pi'
 
-
 const SubmitButtonContainer = styled.button`
   background-color: #fff;
   border-radius: 50%; /* Torna a div circular */
@@ -25,14 +24,14 @@ const SubmitButtonContainer = styled.button`
   }
 `
 
-
- const SubmitButtonIcon = styled(PiPlusBold)`
+const SubmitButtonIcon = styled(PiPlusBold)`
   color:var(--secondary-color);
   height: 27px;
   width: 27px;
   position: absolute;
   left: 15px;
 `
+
 export default function SubmitButton(){
   return(
     <SubmitButtonContainer>
