@@ -35,7 +35,3 @@ Clone down this repository. You will need `node` and `npm` installed globally on
     ```sh
     npm run dev
     ```
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
